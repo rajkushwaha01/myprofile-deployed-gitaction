@@ -1,0 +1,515 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raj Kumar | DevOps Engineer</title>
+
+    <meta name="description"
+          content="Raj Kumar's DevOps Engineer portfolio, skills, projects and contact information.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px 0;
+            border-bottom: 1px solid #263449;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 680px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 60px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .subtitle {
+            color: #38bdf8;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin: 15px 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #38bdf8;
+            color: #07111f;
+            padding: 12px 22px;
+            margin: 15px 10px 0 0;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #7dd3fc;
+        }
+
+        .profile {
+            min-width: 220px;
+            min-height: 220px;
+            border: 3px solid #38bdf8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111827;
+            font-size: 65px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 65px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .about-box {
+            background: #111827;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #263449;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #172337;
+            border: 1px solid #263449;
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #7dd3fc;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 25px;
+            border: 1px solid #263449;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .card li {
+            margin: 7px 0;
+        }
+
+        .education-item {
+            background: #111827;
+            border-left: 4px solid #38bdf8;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .education-item h3 {
+            color: #38bdf8;
+        }
+
+        .contact-box {
+            text-align: center;
+            background: #111827;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #263449;
+        }
+
+        .contact-box a:not(.button) {
+            color: #38bdf8;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background: #111827;
+            padding: 22px;
+            text-align: center;
+            border-top: 1px solid #263449;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 65px 0;
+            }
+
+            .profile {
+                min-width: 160px;
+                min-height: 160px;
+                font-size: 45px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Raj Kumar</div>
+
+                <div>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="container hero">
+            <div class="hero-text">
+                <div class="subtitle">DEVOPS ENGINEER</div>
+
+                <h1>Hello, I'm <span>Raj Kumar</span></h1>
+
+                <p>
+                    I am an aspiring DevOps Engineer with a background in
+                    Computer Science Engineering and practice-based learning
+                    in Linux, AWS, Docker, Kubernetes, Jenkins and CI/CD.
+                </p>
+
+                <p>
+                    My goal is to automate deployment processes, improve
+                    application delivery and build reliable cloud infrastructure.
+                </p>
+
+                <a href="#projects" class="button">View My Projects</a>
+
+                <a href="#contact" class="button">Contact Me</a>
+            </div>
+
+            <div class="profile">RK</div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+
+                <p class="section-description">
+                    A little introduction about my background.
+                </p>
+
+                <div class="about-box">
+                    <p>
+                        My name is Raj Kumar. I completed my B.E. in Computer
+                        Science Engineering from ACS College of Engineering,
+                        Bengaluru, in 2025.
+                    </p>
+
+                    <p>
+                        I have pursued DevOps and AWS training and practised
+                        CI/CD, Linux administration, cloud fundamentals,
+                        containerization and application deployment.
+                    </p>
+
+                    <p>
+                        I am looking for an entry-level DevOps Engineer or
+                        Cloud Engineer opportunity where I can apply my
+                        knowledge and continue learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <p class="section-description">
+                    Technologies and tools I have studied and practised.
+                </p>
+
+                <div class="skills">
+                    <span class="skill">Linux</span>
+                    <span class="skill">Shell Scripting</span>
+                    <span class="skill">AWS EC2</span>
+                    <span class="skill">AWS S3</span>
+                    <span class="skill">AWS IAM</span>
+                    <span class="skill">AWS VPC</span>
+                    <span class="skill">CloudWatch</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">Jenkins</span>
+                    <span class="skill">CI/CD</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">Kubernetes</span>
+                    <span class="skill">Terraform</span>
+                    <span class="skill">Maven</span>
+                    <span class="skill">Nginx</span>
+                    <span class="skill">Tomcat</span>
+                    <span class="skill">SonarQube</span>
+                    <span class="skill">Nexus</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">Networking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+
+                <p class="section-description">
+                    DevOps projects to demonstrate my practical skills.
+                </p>
+
+                <div class="projects">
+
+                    <div class="card">
+                        <h3>01. Jenkins CI/CD Pipeline</h3>
+
+                        <p>
+                            A CI/CD practice project to automate application
+                            build and delivery.
+                        </p>
+
+                        <ul>
+                            <li>GitHub integration</li>
+                            <li>Jenkins pipeline stages</li>
+                            <li>Maven build and testing</li>
+                            <li>Automated workflow</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>02. Docker & Kubernetes</h3>
+
+                        <p>
+                            Containerization and deployment of a sample
+                            application.
+                        </p>
+
+                        <ul>
+                            <li>Dockerfile creation</li>
+                            <li>Docker image building</li>
+                            <li>Kubernetes Deployments</li>
+                            <li>Services and troubleshooting</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>03. AWS & Nginx Deployment</h3>
+
+                        <p>
+                            Practice deploying a static website on a Linux
+                            server using AWS.
+                        </p>
+
+                        <ul>
+                            <li>EC2 instance configuration</li>
+                            <li>Security group configuration</li>
+                            <li>Nginx web server</li>
+                            <li>Basic log monitoring</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title">Education & Training</h2>
+
+                <div class="education-item">
+                    <h3>B.E. — Computer Science Engineering</h3>
+                    <p>ACS College of Engineering, Bengaluru</p>
+                    <p>Graduation Year: 2025</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>DevOps & AWS Training</h3>
+                    <p>JSpiders, Marathahalli, Bengaluru</p>
+                    <p>
+                        Training in Linux, AWS, CI/CD, Docker, Kubernetes
+                        and related DevOps tools.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <h3>DevOps Trainee</h3>
+                    <p>Rooman Technologies</p>
+                    <p>
+                        Practice-based learning in DevOps fundamentals,
+                        Jenkins, GitHub, Docker and AWS.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 class="section-title">Let's Connect</h2>
+
+                    <p>
+                        I am open to entry-level DevOps and Cloud opportunities.
+                    </p>
+
+                    <p>
+                        Email:
+                        <a href="mailto:rajkush.devops@gmail.com">
+                            rajkush.devops@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        LinkedIn:
+                        <a href="https://www.linkedin.com/in/raj-kushwahaa/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View My LinkedIn Profile
+                        </a>
+                    </p>
+
+                    <a href="mailto:rajkush.devops@gmail.com" class="button">
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Raj Kumar.
+            DevOps Engineer Portfolio.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+```
